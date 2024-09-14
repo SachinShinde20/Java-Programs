@@ -1,19 +1,19 @@
-//Enum Class
+// Enum Class
 enum Signal {
-    red, green, yellow;
+    RED, GREEN, YELLOW;
 }
 
 class Traffic {
     public static void main(String[] args) {
 
         // Enum Value
-        Signal signal = Signal.red;
-        // Signal signal = Signal.yellow;
-        // Signal signal = Signal.green;
+        Signal signal = Signal.RED;
+        // Signal signal = Signal.YELLOW;
+        // Signal signal = Signal.GREEN;
 
-        if (signal == signal.red) {
+        if (signal == Signal.RED) {
             System.out.println("Stop!");
-        } else if (signal == signal.yellow) {
+        } else if (signal == Signal.YELLOW) {
             System.out.println("Slow Down! Watch and Go.");
         } else {
             System.out.println("Go");
