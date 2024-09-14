@@ -5,13 +5,13 @@ enum WeekDays {
 public class Days {
     public static void main(String[] args) {
 
-        // WeekDays weekDay = WeekDays.MONDAY;
+        WeekDays weekDay = WeekDays.MONDAY;
         // WeekDays weekDay = WeekDays.THURSDAY;
         // WeekDays weekDay = WeekDays.WEDNESDAY;
         // WeekDays weekDay = WeekDays.THURSDAY;
         // WeekDays weekDay = WeekDays.FRIDAY;
         // WeekDays weekDay = WeekDays.SATURDAY;
-        WeekDays weekDay = WeekDays.SUNDAY;
+        // WeekDays weekDay = WeekDays.SUNDAY;
 
         switch (weekDay) { // Use the variable weekDay here (Object Referance)
             case MONDAY:
