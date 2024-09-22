@@ -179,3 +179,49 @@ try {
 3. `execute()`
    - Purpose: Executes any SQL statement. Returns a boolean indicating whether the result is a `ResultSet` (true) or an update count (false).
    - Return Type: `boolean`
+
+
+
+
+
+
+
+ ------------------------------------------- Result Set -------------------------------------------
+
+ * ResultSet Type:
+ * 
+ * Forward-Only ResultSet (Default)
+ * - Cursor Movement: The cursor can only move forward, one row at a time.
+ * - internal working: Statement statement =
+ * connection.createStatement(ResultSet.TYPE_FORWARD_ONLY,
+ * ResultSet.CONCUR_READ_ONLY);
+ * 
+ * Bi-Directional ResultSet
+ * - Cursor Movement: The cursor can move both forward and backward.
+
+
+ 
+ * (Forward-Only ResultSet):
+ * ResultSet.TYPE_FORWARD_ONLY: The cursor can only move forward.
+ * 
+ * 
+ * (Bi-Directional ResultSet):
+ * ResultSet.TYPE_SCROLL_INSENSITIVE:
+ * - Behavior: If someone else changes the data in the database after you have
+ * created the ResultSet, you won’t see those changes.
+ * The data you see remains the same as when the ResultSet was created.
+ * 
+ * ResultSet.TYPE_SCROLL_SENSITIVE: Behavior:
+ * - If someone else changes the data in the database after you have created the
+ * ResultSet, you will see those changes.
+ * The data you see can update to reflect the current state of the database.
+
+
+
+
+ * Concurrency Mode:
+ * (Forward-Only ResultSet and Bi-Directional ResultSet):
+ * ResultSet.CONCUR_READ_ONLY: You can only read the data; you cannot update it.
+ * 
+ * (Bi-Directional ResultSet):
+ * ResultSet.CONCUR_UPDATABLE: You can read and update the data.
